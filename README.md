@@ -32,8 +32,8 @@
 
 ## Important Notes
 
-- If the number of customers (`customers`) is **zero**, the CAC will return as `inf` (infinity).  
-  This indicates that CAC cannot be calculated due to a division by zero, and it's a valid fallback to prevent application crashes.
+- If the number of customers (`customers`) is zero or less, the CAC will return as `0.0`.  
+  This prevents division by zero errors and simplifies downstream processing.
 
 - Alerts are generated dynamically based on computed metrics, helping guide business decisions (e.g., cost reduction, budget increases).
 
